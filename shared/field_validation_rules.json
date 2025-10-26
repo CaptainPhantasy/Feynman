@@ -3,77 +3,172 @@
     "requirements": [
       "factually_correct",
       "own_words",
-      "complete"
+      "complete",
+      "ELI5_simplicity",
+      "must_use_analogy",
+      "no_jargon",
+      "conversational_tone"
     ],
+    "simplicity_requirements": {
+      "max_grade_level": 6,
+      "max_sentence_length": 15,
+      "must_use_everyday_concepts": true,
+      "no_technical_terms": true
+    },
     "max_attempts": null,
     "unlocks": "mechanism",
     "min_words": 15,
-    "max_words": 150
+    "max_words": 150,
+    "example_prompt": "Explain this like you're talking to a curious 5-year-old. Use toys, food, or games!",
+    "rejection_examples": [
+      "❌ 'Utilizes quantum mechanical properties' → Too academic",
+      "❌ 'Leverages superposition states' → Jargon-heavy",
+      "❌ 'Interest calculated on principal plus accumulated interest' → Too formal",
+      "✅ 'Like a coin that's heads AND tails while spinning' → Perfect!",
+      "✅ 'Like a snowball picking up more snow as it rolls' → Perfect!"
+    ]
   },
   "mechanism": {
     "requirements": [
       "causal_accuracy",
       "no_misconceptions",
-      "concrete"
+      "concrete",
+      "step_by_step_simple",
+      "uses_everyday_objects",
+      "ELI5_simplicity"
     ],
+    "simplicity_requirements": {
+      "max_grade_level": 6,
+      "max_steps": 5,
+      "each_step_max_words": 12,
+      "must_reference_familiar_experience": true
+    },
     "max_attempts": null,
     "unlocks": "example",
     "min_words": 20,
-    "max_words": 200
+    "max_words": 200,
+    "example_prompt": "Explain HOW it works using a step-by-step story. Like building with LEGOs or following a recipe.",
+    "rejection_examples": [
+      "❌ 'Parallel computation paths until measurement' → Too abstract",
+      "❌ 'Exponentially growing returns over time' → Math jargon",
+      "✅ 'First it does X, then Y happens, which makes Z grow bigger' → Clear steps!",
+      "✅ 'Like a snowball: picks up snow → gets bigger → picks up MORE snow' → Perfect!"
+    ]
   },
   "example": {
     "requirements": [
       "concrete_scenario",
       "demonstrates_mechanism",
-      "realistic"
+      "realistic",
+      "uses_relatable_situation",
+      "ELI5_simplicity"
     ],
+    "simplicity_requirements": {
+      "must_be_everyday_scenario": true,
+      "max_grade_level": 6,
+      "use_specific_numbers": true
+    },
     "max_attempts": null,
     "unlocks": "analogy",
     "min_words": 20,
-    "max_words": 200
+    "max_words": 200,
+    "example_prompt": "Give a real-world example using everyday situations - like saving allowance, sharing cookies, etc.",
+    "rejection_examples": [
+      "❌ 'Investment portfolio compound growth' → Too business-y",
+      "✅ 'You have $10. Each week it grows by $1, and THAT $1 also starts growing!' → Perfect!"
+    ]
   },
   "analogy": {
     "requirements": [
       "maps_cleanly",
       "illuminates_core_principle",
-      "accessible"
+      "accessible",
+      "uses_kitchen_playground_toys",
+      "ELI5_simplicity"
     ],
+    "simplicity_requirements": {
+      "must_use_everyday_analogy": true,
+      "max_grade_level": 5,
+      "starts_with_like_or_imagine": true
+    },
     "max_attempts": null,
     "unlocks": "why_matters",
     "min_words": 15,
-    "max_words": 150
+    "max_words": 150,
+    "example_prompt": "Compare it to something a kid would know: food, toys, games, nature, family activities.",
+    "rejection_examples": [
+      "❌ 'Like a financial instrument with compounding yields' → Too formal",
+      "✅ 'Like a snowball rolling downhill getting bigger and bigger' → Perfect!",
+      "✅ 'Like when you share cookies and everyone shares back with you' → Perfect!"
+    ]
   },
   "why_matters": {
     "requirements": [
       "practical_relevance",
       "genuine_importance",
-      "specific"
+      "specific",
+      "relatable_to_everyday_life",
+      "ELI5_simplicity"
     ],
+    "simplicity_requirements": {
+      "max_grade_level": 6,
+      "use_personal_examples": true,
+      "avoid_abstract_benefits": true
+    },
     "max_attempts": null,
     "unlocks": "misconception",
     "min_words": 15,
-    "max_words": 150
+    "max_words": 150,
+    "example_prompt": "Why should someone care? Use examples from their daily life, not abstract benefits.",
+    "rejection_examples": [
+      "❌ 'Optimizes long-term financial outcomes' → Too abstract",
+      "✅ 'Helps your birthday money grow into enough for a new bike!' → Concrete and relatable!"
+    ]
   },
   "misconception": {
     "requirements": [
       "common_error",
       "explains_why_wrong",
-      "clarifies_truth"
+      "clarifies_truth",
+      "uses_simple_contrast",
+      "ELI5_simplicity"
     ],
+    "simplicity_requirements": {
+      "max_grade_level": 6,
+      "use_before_after_structure": true,
+      "concrete_examples_of_error": true
+    },
     "max_attempts": null,
     "unlocks": "integration",
     "min_words": 20,
-    "max_words": 200
+    "max_words": 200,
+    "example_prompt": "What do people get wrong? Explain the mistake simply and show what's actually true.",
+    "rejection_examples": [
+      "❌ 'Conflation of exponential growth with linear progression' → Too academic",
+      "✅ 'People think it grows the same amount each time, but it actually grows MORE and MORE!' → Clear!"
+    ]
   },
   "integration": {
     "requirements": [
       "connects_to_existing",
       "builds_knowledge_web",
-      "demonstrates_understanding"
+      "demonstrates_understanding",
+      "uses_simple_connections",
+      "ELI5_simplicity"
     ],
+    "simplicity_requirements": {
+      "max_grade_level": 6,
+      "relate_to_familiar_concepts": true,
+      "show_how_ideas_connect": true
+    },
     "max_attempts": null,
     "unlocks": null,
     "min_words": 20,
-    "max_words": 200
+    "max_words": 200,
+    "example_prompt": "How does this connect to other things you know? Build bridges between ideas simply.",
+    "rejection_examples": [
+      "❌ 'Relates to exponential functions in mathematics and economics' → Too formal",
+      "✅ 'It's like how practice makes you better - the more you practice, the faster you learn NEW things!' → Great connection!"
+    ]
   }
 }
