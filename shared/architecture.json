@@ -1,0 +1,27 @@
+{
+  "core_components": {
+    "TeachingPane": "left side, Claude's teaching",
+    "PracticeSheetPane": "right side, user's fields",
+    "FieldComponents": [
+      "definition",
+      "mechanism",
+      "example",
+      "analogy",
+      "why_matters",
+      "misconception",
+      "integration"
+    ],
+    "DemoPlayer": "compound interest demonstration"
+  },
+  "api_integration": {
+    "model": "claude-sonnet-4-20250514",
+    "max_tokens": 4096,
+    "thinking_budget": 2000,
+    "web_search": "enabled for research phase"
+  },
+  "compression_thresholds": {
+    "soft": 30000,
+    "hard": 50000,
+    "emergency": 70000
+  }
+}
