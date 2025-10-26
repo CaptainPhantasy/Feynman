@@ -1,0 +1,222 @@
+{
+  "demo_concept": "Compound Interest",
+  "total_duration_seconds": 180,
+  "speed_options": [1, 2, 5],
+  "sequence": [
+    {
+      "timestamp": 0,
+      "action": "show_welcome",
+      "content": "Welcome! Let me show you how the Feynman Learning System works using 'Compound Interest' as an example.",
+      "duration": 3
+    },
+    {
+      "timestamp": 3,
+      "action": "claude_research",
+      "content": "First, I'll research the concept thoroughly...",
+      "show_thinking": true,
+      "duration": 2
+    },
+    {
+      "timestamp": 5,
+      "action": "claude_teaching_start",
+      "content": "Let's start with the definition. Try explaining what compound interest is in your own words.",
+      "field": "definition",
+      "duration": 3
+    },
+    {
+      "timestamp": 8,
+      "action": "user_types",
+      "field": "definition",
+      "typed_text": "Interest that grows over time",
+      "typing_speed": 80,
+      "duration": 2
+    },
+    {
+      "timestamp": 10,
+      "action": "claude_analyzes",
+      "content": "Let me check that...",
+      "show_thinking": true,
+      "duration": 1
+    },
+    {
+      "timestamp": 11,
+      "action": "claude_feedback",
+      "field": "definition",
+      "feedback_type": "needs_revision",
+      "content": "You're on the right track, but let's be more specific. What makes compound interest different from simple interest? What is the interest being calculated on?",
+      "duration": 4
+    },
+    {
+      "timestamp": 15,
+      "action": "user_deletes",
+      "field": "definition",
+      "duration": 1
+    },
+    {
+      "timestamp": 16,
+      "action": "user_types",
+      "field": "definition",
+      "typed_text": "Interest calculated on both principal and accumulated interest",
+      "typing_speed": 75,
+      "duration": 3
+    },
+    {
+      "timestamp": 19,
+      "action": "claude_analyzes",
+      "show_thinking": true,
+      "duration": 1
+    },
+    {
+      "timestamp": 20,
+      "action": "claude_feedback",
+      "field": "definition",
+      "feedback_type": "approved",
+      "content": "Perfect! You've captured the core concept. Compound interest is indeed interest calculated on the initial principal AND the accumulated interest from previous periods. Moving on to mechanism!",
+      "duration": 4
+    },
+    {
+      "timestamp": 24,
+      "action": "field_unlock",
+      "field": "mechanism",
+      "duration": 1
+    },
+    {
+      "timestamp": 25,
+      "action": "claude_teaching",
+      "content": "Now explain HOW compound interest works. What's the step-by-step process?",
+      "field": "mechanism",
+      "duration": 3
+    },
+    {
+      "timestamp": 28,
+      "action": "user_types",
+      "field": "mechanism",
+      "typed_text": "You invest money and it grows exponentially",
+      "typing_speed": 80,
+      "duration": 2
+    },
+    {
+      "timestamp": 30,
+      "action": "claude_analyzes",
+      "show_thinking": true,
+      "duration": 1
+    },
+    {
+      "timestamp": 31,
+      "action": "claude_feedback",
+      "field": "mechanism",
+      "feedback_type": "needs_revision",
+      "content": "I see a common misconception here. You said it grows 'exponentially' - that's actually not quite right. Compound interest grows exponentially in mathematical terms, but the mechanism itself is simpler. Can you describe the actual steps that happen each period?",
+      "highlight": "misconception_caught",
+      "duration": 5
+    },
+    {
+      "timestamp": 36,
+      "action": "user_pause",
+      "duration": 3
+    },
+    {
+      "timestamp": 39,
+      "action": "user_deletes",
+      "field": "mechanism",
+      "duration": 1
+    },
+    {
+      "timestamp": 40,
+      "action": "user_types",
+      "field": "mechanism",
+      "typed_text": "Each period the interest is calculated and added to the principal",
+      "typing_speed": 70,
+      "duration": 3
+    },
+    {
+      "timestamp": 43,
+      "action": "claude_analyzes",
+      "show_thinking": true,
+      "duration": 1
+    },
+    {
+      "timestamp": 44,
+      "action": "claude_feedback",
+      "field": "mechanism",
+      "feedback_type": "needs_revision",
+      "content": "Better! You're getting closer. But let's be more specific about what happens. What is the interest calculated ON each period? And what happens to the total?",
+      "duration": 4
+    },
+    {
+      "timestamp": 48,
+      "action": "user_pause",
+      "duration": 2
+    },
+    {
+      "timestamp": 50,
+      "action": "user_deletes",
+      "field": "mechanism",
+      "duration": 1
+    },
+    {
+      "timestamp": 51,
+      "action": "user_types",
+      "field": "mechanism",
+      "typed_text": "Each period, interest is calculated on the current total (principal + previous interest), then that new interest is added to the total, which becomes the base for the next period's calculation",
+      "typing_speed": 75,
+      "duration": 6
+    },
+    {
+      "timestamp": 57,
+      "action": "claude_analyzes",
+      "show_thinking": true,
+      "duration": 2
+    },
+    {
+      "timestamp": 59,
+      "action": "claude_feedback",
+      "field": "mechanism",
+      "feedback_type": "approved",
+      "content": "Excellent! Now you've nailed the mechanism. Notice how you went from a vague 'exponential growth' to a concrete step-by-step process. That's the power of the Feynman method - forcing clarity through your own explanations.",
+      "highlight": "learning_moment",
+      "duration": 5
+    },
+    {
+      "timestamp": 64,
+      "action": "field_unlock",
+      "field": "example",
+      "duration": 1
+    },
+    {
+      "timestamp": 65,
+      "action": "fast_forward_indicator",
+      "content": "Demo continues through remaining fields...",
+      "duration": 2
+    },
+    {
+      "timestamp": 67,
+      "action": "show_completion",
+      "content": "Practice sheet complete! The system validated each field through multiple teaching loops, catching misconceptions and ensuring true understanding.",
+      "duration": 3
+    },
+    {
+      "timestamp": 70,
+      "action": "show_pdf_export",
+      "content": "Your completed practice sheet is ready for export and future review.",
+      "duration": 2
+    },
+    {
+      "timestamp": 72,
+      "action": "show_cta",
+      "content": "Ready to master your own concept?",
+      "button": "Start Your Learning",
+      "duration": null
+    }
+  ],
+  "struggle_indicators": {
+    "multiple_deletions": true,
+    "decreasing_length": true,
+    "long_pauses": true,
+    "misconception_catch": "exponentially"
+  },
+  "emotional_intelligence_demo": {
+    "frustration_point": 48,
+    "response": "You're doing great - struggle is a sign of deep learning happening. Let's break this down together."
+  }
+}

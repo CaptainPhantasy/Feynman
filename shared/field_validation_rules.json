@@ -1,0 +1,79 @@
+{
+  "definition": {
+    "requirements": [
+      "factually_correct",
+      "own_words",
+      "complete"
+    ],
+    "max_attempts": null,
+    "unlocks": "mechanism",
+    "min_words": 15,
+    "max_words": 150
+  },
+  "mechanism": {
+    "requirements": [
+      "causal_accuracy",
+      "no_misconceptions",
+      "concrete"
+    ],
+    "max_attempts": null,
+    "unlocks": "example",
+    "min_words": 20,
+    "max_words": 200
+  },
+  "example": {
+    "requirements": [
+      "concrete_scenario",
+      "demonstrates_mechanism",
+      "realistic"
+    ],
+    "max_attempts": null,
+    "unlocks": "analogy",
+    "min_words": 20,
+    "max_words": 200
+  },
+  "analogy": {
+    "requirements": [
+      "maps_cleanly",
+      "illuminates_core_principle",
+      "accessible"
+    ],
+    "max_attempts": null,
+    "unlocks": "why_matters",
+    "min_words": 15,
+    "max_words": 150
+  },
+  "why_matters": {
+    "requirements": [
+      "practical_relevance",
+      "genuine_importance",
+      "specific"
+    ],
+    "max_attempts": null,
+    "unlocks": "misconception",
+    "min_words": 15,
+    "max_words": 150
+  },
+  "misconception": {
+    "requirements": [
+      "common_error",
+      "explains_why_wrong",
+      "clarifies_truth"
+    ],
+    "max_attempts": null,
+    "unlocks": "integration",
+    "min_words": 20,
+    "max_words": 200
+  },
+  "integration": {
+    "requirements": [
+      "connects_to_existing",
+      "builds_knowledge_web",
+      "demonstrates_understanding"
+    ],
+    "max_attempts": null,
+    "unlocks": null,
+    "min_words": 20,
+    "max_words": 200
+  }
+}

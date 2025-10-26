@@ -1,0 +1,117 @@
+.app-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.app-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--spacing-md) var(--spacing-xl);
+  background-color: var(--color-bg-primary);
+  border-bottom: 1px solid var(--color-border);
+  box-shadow: var(--shadow-sm);
+}
+
+.app-header h1 {
+  font-size: 1.5rem;
+  margin: 0;
+  color: var(--color-primary);
+}
+
+.header-actions {
+  display: flex;
+  gap: var(--spacing-md);
+}
+
+.app-main {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+}
+
+.app-loading {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  gap: var(--spacing-lg);
+}
+
+.app-loading p {
+  color: var(--color-text-secondary);
+  margin: 0;
+}
+
+/* Two-pane layout */
+.app-main > * {
+  flex: 1;
+  overflow-y: auto;
+}
+
+.app-main > *:first-child {
+  border-right: 1px solid var(--color-border);
+}
+
+/* Mobile responsive - tabbed interface */
+@media (max-width: 768px) {
+  .app-header h1 {
+    font-size: 1.25rem;
+  }
+
+  .app-header {
+    padding: var(--spacing-sm) var(--spacing-md);
+  }
+
+  .app-main {
+    flex-direction: column;
+  }
+
+  .app-main > *:first-child {
+    border-right: none;
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  /* Show/hide panes on mobile */
+  .app-main.teaching-focused .practice-sheet-pane {
+    display: none;
+  }
+
+  .app-main.practice-focused .teaching-pane {
+    display: none;
+  }
+}
+
+/* Tablet adjustable split */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .app-main > * {
+    min-width: 300px;
+  }
+}
+
+/* Desktop resizable */
+@media (min-width: 1025px) {
+  .app-main {
+    position: relative;
+  }
+
+  .resize-handle {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 10px;
+    margin-left: -5px;
+    cursor: col-resize;
+    background-color: transparent;
+    z-index: 10;
+  }
+
+  .resize-handle:hover {
+    background-color: var(--color-primary);
+    opacity: 0.1;
+  }
+}
